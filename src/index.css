@@ -1,51 +1,37 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
 body {
-  background-color: #798080;
-  color: #292d2d;
-  text-align: center;
-}
-
-#logo-img {
-  width: 7rem;
-  height: 7rem;
-  background-color: #3f3828;
-  border-radius: 50%;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  border: 4px solid #292d2d;
+  min-height: 100vh;
+  background-color: #f0f0f0;
 }
 
-header img {
-  width: 4rem;
-  height: 4rem;
-  margin: 2rem 0;
-  object-fit: contain;
+.kakuye {
+  display: inline-block;
+  position: relative;
+  font-size: 200px;
+  color: #333;
 }
 
-main {
-  margin: 2rem auto;
-  padding: 2rem;
-  max-width: 50rem;
-  background-color: #292d2d;
-  border-radius: 8px;
-  color: white;
+.kakuye::before,
+.kakuye::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 10px;
+  background-color: #333;
 }
 
-button {
-  font: inherit;
-  cursor: pointer;
-  background-color: #f8bd47;
-  color: #292d2d;
-  padding: 0.25rem 1rem;
-  border-radius: 4px;
-  border: 1px solid #f8bd47;
+.kakuye::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.kakuye::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
