@@ -1,8 +1,0 @@
-name: Output
-on: workflow_dispatch
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Context
-        run: echo "${{toJson(github)}}"
